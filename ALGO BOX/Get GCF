@@ -1,0 +1,17 @@
+int getGcf(int li,int d1,int d2)
+{
+ int ans=0;
+  for(int x=1;((li+(x*d1))%d2)>(0);x++)
+  {
+  //  cout<<x<<endl;
+    int y=((li+((x+1)*d1))%d2);
+   // cout<<"y: "<<y<<endl;
+    if(y==0)
+    {
+      ans=x+1;
+    }
+
+  }
+ // cout<<endl<<ans<<"finished";
+  return li+(ans*d1);
+}
